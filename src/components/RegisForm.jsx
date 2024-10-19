@@ -50,6 +50,7 @@ class RegisForm extends React.Component{
     render(){
         return(
             <div className="regis-form">
+                <form action="submit">
                 <InputField
                 style={style} 
                 type={"text"} 
@@ -78,13 +79,15 @@ class RegisForm extends React.Component{
                 </InputField>
 
                 <InputField 
-                style={style}
+                style={style+"px-"}
                 type={"text"} 
                 name={"Phone"} 
                 value={this.state.phone} 
                 onchange={this.onPhoneChangeEventHandler}>
 
                 </InputField>
+                <button className="rounded-lg bg-[#07A0A8] w-96 py-1 text-white text-center mt-10" type="submit">Submit</button>
+                </form>
             </div>
         )
     }
