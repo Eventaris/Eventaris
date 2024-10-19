@@ -9,7 +9,8 @@ class RegisForm extends React.Component{
             nama: '',
             email: '',
             pass: '',
-            phone: ''
+            phone: '',
+            emailError: ''
         }
 
         this.onNameChangeEventHandler = this.onNameChangeEventHandler.bind(this);
@@ -24,5 +25,27 @@ class RegisForm extends React.Component{
                 nama: event.target.value
             }
         })
+    }
+    onEmailChangeEventHandler(event){
+        const inputEmail = event.target.value;
+        this.setState(()=>{
+            return{
+                email: inputEmail
+            }
+        })
+
+        if(!inputEmail.includes('@')){
+            this.setState(()=>{
+                return{
+                    emailError: 'Input Email Tidak Sesuai'
+                }
+            })
+        }else{
+            this.setState(()=>{
+                return{
+                    emailError: ''
+                }
+            })
+        }
     }
 }
