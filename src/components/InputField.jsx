@@ -1,10 +1,10 @@
 import React from "react";
 
-const InputField = ({value, onchange, name, type}) => {
+const InputField = ({style,value, onchange, name, type}) => {
     return(
         <div>
-            <label htmlFor={name}>{name}</label>
-            <input type={type} name={name} id={name} value={value} onChange={onchange}/>
+            <span class="block text-sm font-medium text-slate-700 pt-4">{name}</span>
+            <input className={style} placeholder={name} type={type} name={name} id={name} value={value} onChange={onchange}/>
         </div>
     )
 }
