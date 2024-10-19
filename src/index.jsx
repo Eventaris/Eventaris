@@ -1,8 +1,9 @@
 import React from 'react';
 import "./index.css";
 import { createRoot } from 'react-dom/client';
+import RegistApp from './pages/RegistApp';
  
-const element = <h1 className='text-4xl text-blue-700'>Ini adalah Page Registrasi</h1>;
+const element = <RegistApp/>;
  
 const root = createRoot(document.getElementById('root'));
 root.render(element);

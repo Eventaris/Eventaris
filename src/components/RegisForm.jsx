@@ -48,4 +48,32 @@ class RegisForm extends React.Component{
             })
         }
     }
+    onPassChangeEventHandler(event){
+        this.setState(()=>{
+            return{
+                pass: event.target.value
+            }
+        })
+    }
+    onPhoneChangeEventHandler(event){
+        this.setState(()=>{
+            return{
+                phone: event.target.value
+            }
+        })
+    }
+    render(){
+        return(
+            <div className="regis-form">
+                <InputField type={"text"} name={"Name"} value={this.state.nama} onchange={this.onNameChangeEventHandler}></InputField>
+                <InputField type={"email"} name={"Email"} value={this.state.email} onchange={this.onEmailChangeEventHandler}></InputField>
+                {this.state.emailError!='' && (
+                    <div style={{ color: 'red' }}>{this.state.emailError}</div>
+                )}
+                <InputField type={"password"} name={"Password"} value={this.state.pass} onchange={this.onPassChangeEventHandler}></InputField>
+                <InputField type={"text"} name={"Phone"} value={this.state.phone} onchange={this.onPhoneChangeEventHandler}></InputField>
+            </div>
+        )
+    }
 }
+export default RegisForm;
