@@ -79,7 +79,7 @@ class RegisForm extends React.Component{
                 </InputField>
 
                 <InputField 
-                style={style+"px-"}
+                style={style}
                 type={"text"} 
                 name={"Phone"} 
                 value={this.state.phone} 
