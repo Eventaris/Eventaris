@@ -1,10 +1,10 @@
 import React from 'react';
 import "./index.css";
 import { createRoot } from 'react-dom/client';
-import RegistApp from './pages/RegistApp';
+import LandingApp from './pages/LandingApp';
 import '@fontsource/inter';
 
-const element = <RegistApp/>;
+const element = <LandingApp/>;
  
 const root = createRoot(document.getElementById('root'));
 root.render(element);
