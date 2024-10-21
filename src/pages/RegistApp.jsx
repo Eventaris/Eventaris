@@ -1,10 +1,10 @@
 import React from "react";
 import RegisRightSide from "../components/RegisRightSide";
-import RegisLeftSide from "../components/RegisLeftSide";
+import LeftSideImage from "../components/LeftSideImage";
 const RegistApp = () =>{
     return(
         <div className={"flex h-screen"}>
-            <RegisLeftSide/>
+            <LeftSideImage/>
             <RegisRightSide/>
         </div>
         )
