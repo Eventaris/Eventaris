@@ -2,7 +2,7 @@ import React from "react";
 
 const Navbar = () => {
     return (
-        <div className="bg-green1 w-full h-16 px-24 flex justify-between items-center text-white">
+        <div className="bg-green1 w-full h-16 px-24 flex justify-between items-center text-white fixed top-0">
             <div className="flex gap-4 items-center">
                 <img
                     src="src\assets\Logo White.png"
