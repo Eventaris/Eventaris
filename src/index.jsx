@@ -1,6 +1,7 @@
 import React from 'react';
 import "./index.css";
 import { createRoot } from 'react-dom/client';
+
 import LandingApp from './pages/LandingApp';
 import '@fontsource/inter';
 
