@@ -86,7 +86,7 @@ class RegisForm extends React.Component{
                 onchange={this.onPhoneChangeEventHandler}>
 
                 </InputField>
-                <button className="rounded-md bg-[#07A0A8] w-96 py-[5px] text-white text-center mt-10 font-inter text-[13px]" type="submit">Sign Up</button>
+                <button className="hover:bg-green2 hover:brightness-110 rounded-md bg-[#07A0A8] w-96 py-[0.5rem] text-white text-center mt-10 font-inter text-[13px]" type="submit">Sign Up</button>
                 </form>
             </div>
         )
