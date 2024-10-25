@@ -6,8 +6,8 @@ const LoginOrRegist = ({text, target, sub}) =>{
         <div>
         <p className="text-sm text-center mt-5">
             {text}
-            <Link to={target}>
-                <a className="text-blue-600 visited:text-purple-600 underline hover:font-bold">{sub}</a>
+            <Link className="text-blue-600 underline hover:font-bold" to={target}>
+                {sub}
             </Link>
         </p>
         </div>
