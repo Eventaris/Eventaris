@@ -9,15 +9,15 @@ import {LoginApp, LandingApp, RegistApp} from './pages/';//jangan lupa tambah ka
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <LoginApp />,
+    element: <LandingApp />,
   },
   {
     path: "/registrasi",
     element: <RegistApp />,
   },
   {
-    path: "/landing",
-    element: <LandingApp />,
+    path: "/login",
+    element: <LoginApp />,
   },
 ]);
 
