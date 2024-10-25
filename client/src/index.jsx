@@ -1,7 +1,7 @@
 import React from 'react';
 import "./index.css";
 import '@fontsource/inter';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import {LoginApp, LandingApp, RegistApp} from './pages/';//jangan lupa tambah kalau ada page baru
 
