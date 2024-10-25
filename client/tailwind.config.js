@@ -12,6 +12,8 @@ export default {
       colors: {
         'green1': '#035F76',
         'green2': '#037E8E',
+        'green3': '#BFE4E5',
+        'green4': '#F0FEFF',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'], // Menambahkan font Inter
