@@ -3,7 +3,7 @@ import RegisRightSide from "../components/RegisRightSide";
 import LeftSideImage from "../components/LeftSideImage";
 const RegistApp = () =>{
     return(
-        <div className={"flex h-screen"}>
+        <div className="flex h-screen">
             <LeftSideImage/>
             <RegisRightSide/>
         </div>
