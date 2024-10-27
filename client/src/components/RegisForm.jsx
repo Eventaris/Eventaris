@@ -9,7 +9,7 @@ class RegisForm extends React.Component{
         this.state = {
             nama: '',
             email: '',
-            pass: '',
+            password: '',
             phone: '',
         }
 
@@ -17,6 +17,7 @@ class RegisForm extends React.Component{
         this.onEmailChangeEventHandler = this.onEmailChangeEventHandler.bind(this);
         this.onPassChangeEventHandler = this.onPassChangeEventHandler.bind(this);
         this.onPhoneChangeEventHandler = this.onPhoneChangeEventHandler.bind(this);
+        this.onSubmitHandler = this.onSubmitHandler.bind(this)
     }
 
     onNameChangeEventHandler(event){
@@ -36,7 +37,7 @@ class RegisForm extends React.Component{
     onPassChangeEventHandler(event){
         this.setState(()=>{
             return{
-                pass: event.target.value
+                password: event.target.value
             }
         })
     }
@@ -47,11 +48,14 @@ class RegisForm extends React.Component{
             }
         })
     }
-
+    onSubmitHandler(event) {
+        event.preventDefault();
+        this.props.addUser(this.state); // Mengirim data registrasi ke komponen utama
+    }
     render(){
         return(
             <div className="regis-form">
-                <form action="submit">
+                <form onSubmit={this.onSubmitHandler}>
                 <InputField
                 style={style} 
                 type={"text"} 
@@ -74,7 +78,7 @@ class RegisForm extends React.Component{
                 style={style}
                 type={"password"} 
                 name={"Password"} 
-                value={this.state.pass} 
+                value={this.state.password} 
                 onchange={this.onPassChangeEventHandler}>
 
                 </InputField>
