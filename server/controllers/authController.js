@@ -22,6 +22,7 @@ const register = async (req, res) => {
       email,
       password: hashedPassword,
       phone,
+      createAt: new Date().getTime() + 7 * 60 * 60 * 1000,
     });
 
     res.status(201).json({
