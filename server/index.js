@@ -3,8 +3,13 @@ require("dotenv").config();
 const express = require("express");
 const sequelize = require("./config/database");
 const userRoutes = require("./routes/userRoutes");
+const cors = require("cors"); // Import cors
 
 const app = express();
+app.use(cors({
+  origin: 'http://localhost:5173',
+}));
+
 app.use(express.json());
 app.use(userRoutes);
 
