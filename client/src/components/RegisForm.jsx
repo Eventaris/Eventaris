@@ -50,7 +50,32 @@ class RegisForm extends React.Component{
     }
     onSubmitHandler(event) {
         event.preventDefault();
-        this.props.addUser(this.state); // Mengirim data registrasi ke komponen utama
+
+        const user = {
+            nama: this.state.nama,
+            email: this.state.email,
+            password: this.state.password,
+            phone: this.state.phone,
+        };
+
+        // Mengirim data ke backend
+        fetch("http://localhost:5000/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("User registered successfully:", data);
+              console.log(user)
+              alert("Registrasi berhasil!");
+            })
+            .catch((error) => {
+              console.error("Error registering user:", error);
+              alert("Registrasi gagal. Silakan coba lagi.");
+            });
     }
     render(){
         return(
