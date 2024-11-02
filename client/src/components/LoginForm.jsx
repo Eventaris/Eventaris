@@ -8,8 +8,8 @@ class LoginForm extends React.Component{
         super(props)
 
         this.state = {
-            username: '',
-            pass: '',
+            email: '',
+            password: '',
             isLoading: false
         }
 
@@ -21,14 +21,14 @@ class LoginForm extends React.Component{
     onUsernameChangeEventHandler(event){
         this.setState(()=>{
             return{
-                username: event.target.value
+                email: event.target.value
             }
         })
     }
     onPassChangeEventHandler(event){
         this.setState(()=>{
             return{
-                pass: event.target.value
+                password: event.target.value
             }
         })
     }
@@ -36,6 +36,32 @@ class LoginForm extends React.Component{
     onSubmitHandler(event){
         event.preventDefault()
         this.setState({isLoading: true})
+        const email = this.state.email
+        const password = this.state.password
+
+        fetch("http://localhost:5000/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({email, password}),
+        })
+
+        .then((response)=>response.json())
+        .then((data)=>{
+            if(data.token){
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("user",JSON.stringify(data.user));
+                alert(data.message);
+                window.location.href = "/dasboard";
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch((error)=> console.error("Error",error))
+        .finally(()=>{
+            this.setState({isLoading:false})
+        })
     }
 
     render(){
@@ -46,7 +72,7 @@ class LoginForm extends React.Component{
                 style={style + "invalid:border-pink-500 invalid:text-pink-600 focus:invalid:border-pink-500 focus:invalid:ring-pink-500"}
                 type={"email"}
                 name={"Email"}
-                value={this.state.usernamne}
+                value={this.state.email}
                 onchange={this.onUsernameChangeEventHandler}>
 
                 </InputField>
