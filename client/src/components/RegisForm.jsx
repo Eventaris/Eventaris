@@ -141,9 +141,7 @@ class RegisForm extends React.Component {
                 <LoginOrRegist text="Already have an account? " sub="Login" target="/login" />
 
                 {this.state.isLoading && (
-                    <div className="fixed inset-0 bg-black opacity-50 z-50 flex justify-center items-center">
-                        <Loading />
-                    </div>
+                    <Loading />
                 )}
 
                 {this.state.showModal && (
