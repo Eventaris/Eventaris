@@ -45,13 +45,12 @@ class LoginForm extends React.Component{
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({email, password}),
+            credentials: 'include',
         })
 
         .then((response)=>response.json())
         .then((data)=>{
-            if(data.token){
-                localStorage.setItem("token", data.token);
-                localStorage.setItem("user",JSON.stringify(data.user));
+            if(data.user){
                 alert(data.message);
                 window.location.href = "/dasboard";
             } else {
