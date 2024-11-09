@@ -22,18 +22,10 @@ const User = sequelize.define(
     password: {
       type: DataTypes.STRING,
     },
-    createAt: {
-      type: DataTypes.DATE,
-      field: "create_at",
-    },
-    updateAt: {
-      type: DataTypes.DATE,
-      field: "update_at",
-    },
   },
   {
     tableName: "users",
-    timestamps: false,
+    timestamps: true,
   }
 );
 
