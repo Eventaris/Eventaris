@@ -1,6 +1,6 @@
 import React from "react";
-import PrimaryBtn from "./PrimaryBtn";
-import SecondaryBtn from "./SecondaryBtn";
+import PrimaryBtn from "../btn/PrimaryBtn";
+import SecondaryBtn from "../btn/SecondaryBtn";
 
 const Navbar = ({ isLoggedIn }) => {
     return (

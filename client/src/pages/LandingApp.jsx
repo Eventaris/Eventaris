@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Navbar from "../components/Navbar";
-import CtaBtn from "../components/CtaBtn";
-import CategoryCard from "../components/CategoryCard";
-import StepCard from "../components/StepCard";
+import Navbar from "../components/nav/Navbar";
+import CtaBtn from "../components/btn/CtaBtn";
+import CategoryCard from "../components/card/CategoryCard";
+import StepCard from "../components/card/StepCard";
 import Footer from "../components/Footer";
 
 const LandingApp = () => {
