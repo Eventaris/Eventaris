@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "../components/card/ProductCard";
+import Navbar from "../components/nav/Navbar";
+import Footer from "../components/Footer";
 const DashboardApp = () => {
     const [user, setUser] = useState(null);
     useEffect(() => {
@@ -27,17 +29,19 @@ const DashboardApp = () => {
 
     if (user) {
         return (
-            <div>
-                <h1>Hello {user.nama} This Is Main Page After Login</h1>
-                <div classname="relative"><a href="#">
-                    <img classname="w-full"
-                        src="https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
-                        alt="Sunset in the mountains" />
-                    <div
-                        classname="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
-                    </div>
-                </a>
+            <div className="pt-10">
+                <Navbar isLoggedIn={true}/>
+                <div className=" grid  md:grid-cols-4  gap-10 p-10">
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
+                    <ProductCard count={100000} cate={"Sablon"} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"#"} title={"Sablon Annas"} desc={"loreimpus loreimpus loreimpus loreimpusloreimpus loreimpus loreimpus"} />
                 </div>
+                <Footer/>
             </div>
         )
     }
