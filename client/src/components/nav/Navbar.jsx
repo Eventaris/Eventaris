@@ -4,7 +4,7 @@ import SecondaryBtn from "../btn/SecondaryBtn";
 
 const Navbar = ({ isLoggedIn }) => {
     return (
-        <div className="bg-green1 w-full h-16 px-24 flex justify-between items-center text-white fixed top-0">
+        <div className="z-10 bg-green1 w-full h-16 px-24 flex justify-between items-center text-white fixed top-0">
             {/* Logo */}
             <div className="flex gap-4 items-center">
                 <img
