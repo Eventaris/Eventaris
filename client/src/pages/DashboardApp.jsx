@@ -1,8 +1,8 @@
 import React, {useEffect, useState } from "react";
-const DasboardApp = () => {
+const DashboardApp = () => {
     const [user, setUser] = useState(null);
     useEffect(()=>{
-    fetch("http://localhost:5000/dasboard", {
+    fetch("http://localhost:5000/dashboard", {
         method: "GET",
         credentials: 'include',
     })
@@ -32,4 +32,4 @@ const DasboardApp = () => {
     }
 }
 
-export default DasboardApp
+export default DashboardApp
