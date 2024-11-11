@@ -1,7 +1,7 @@
 import React from "react";
 import PrimaryBtn from "../btn/PrimaryBtn";
 import SecondaryBtn from "../btn/SecondaryBtn";
-
+import SearchBar from "../SearchBar";
 
 const Navbar = ({ isLoggedIn }) => {
     return (
