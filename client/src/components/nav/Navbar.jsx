@@ -35,23 +35,23 @@ const Navbar = ({ isLoggedIn }) => {
                                 <path
                                     d="M11.8055 11.9995H66.4067L59.5815 41.5751H18.6307M59.5815 50.6753H20.9057L9.53047 2.89929H2.70532"
                                     stroke="white"
-                                    stroke-width="4.5501"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="4.5501"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                                 <path
                                     d="M55.0314 64.3255C57.5444 64.3255 59.5815 62.2884 59.5815 59.7754C59.5815 57.2625 57.5444 55.2253 55.0314 55.2253C52.5185 55.2253 50.4813 57.2625 50.4813 59.7754C50.4813 62.2884 52.5185 64.3255 55.0314 64.3255Z"
                                     stroke="white"
-                                    stroke-width="4.5501"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="4.5501"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                                 <path
                                     d="M25.4559 64.3255C27.9688 64.3255 30.006 62.2884 30.006 59.7754C30.006 57.2625 27.9688 55.2253 25.4559 55.2253C22.9429 55.2253 20.9058 57.2625 20.9058 59.7754C20.9058 62.2884 22.9429 64.3255 25.4559 64.3255Z"
                                     stroke="white"
-                                    stroke-width="4.5501"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
+                                    strokeWidth="4.5501"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
                                 />
                             </svg>
                         </button>

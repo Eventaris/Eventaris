@@ -5,30 +5,30 @@ import Footer from "../components/Footer";
 import { Carousel } from "flowbite-react";
 const DashboardApp = () => {
     const [user, setUser] = useState(null);
-    // useEffect(() => {
-    //     fetch("http://localhost:5000/dashboard", {
-    //         method: "GET",
-    //         credentials: 'include',
-    //     })
-    //         .then((response) => {
-    //             if (!response.ok) {
-    //                 return response.json().then((errorData) => {
-    //                     throw new Error(errorData.message || "Terjadi kesalahan");
-    //                 });
-    //             }
-    //             return response.json();
-    //         })
-    //         .then((data) => {
-    //             setUser(data.user);
-    //         })
-    //         .catch((error) => {
-    //             //alert(`Error: ${error.message}`);
-    //             sessionStorage.setItem("errorMessage", error.message);
-    //             window.location.href = "/login";
-    //         });
-    // }, []);
+    useEffect(() => {
+        fetch("http://localhost:5000/dashboard", {
+            method: "GET",
+            credentials: 'include',
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    return response.json().then((errorData) => {
+                        throw new Error(errorData.message || "Terjadi kesalahan");
+                    });
+                }
+                return response.json();
+            })
+            .then((data) => {
+                setUser(data.user);
+            })
+            .catch((error) => {
+                //alert(`Error: ${error.message}`);
+                sessionStorage.setItem("errorMessage", error.message);
+                window.location.href = "/login";
+            });
+    }, []);
 
-    //if (user) {
+    if (user) {
     return (
         <div>
             <Navbar isLoggedIn={true} />
@@ -48,7 +48,7 @@ const DashboardApp = () => {
             <Footer />
         </div>
     )
-    //}
+    }
 }
 
 export default DashboardApp
