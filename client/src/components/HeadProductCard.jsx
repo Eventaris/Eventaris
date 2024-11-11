@@ -1,11 +1,11 @@
 import React from "react";
 import ProductImage from "./ProductImage";
 import CategoryBar from "./CategoryBar";
-const HeadProductCard = ({image, link, cate}) => {
+const HeadProductCard = ({image, cate}) => {
     return (
         <div className="relative">
             <CategoryBar cate={cate}/>
-            <ProductImage image={image} link={link}/>
+            <ProductImage image={image}/>
         </div>
     )
 }
