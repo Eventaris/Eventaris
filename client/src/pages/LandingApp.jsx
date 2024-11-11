@@ -6,7 +6,7 @@ import StepCard from "../components/StepCard";
 import Footer from "../components/Footer";
 
 const LandingApp = () => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
 
     return (
         <div>
