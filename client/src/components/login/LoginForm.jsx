@@ -1,7 +1,7 @@
 import React from "react";
-import InputField from "./InputField";
-import LoginOrRegist from "../components/LoginOrRegist";
-import Loading from "./Loading";
+import InputField from "../InputField";
+import LoginOrRegist from "../LoginOrRegist";
+import Loading from "../Loading";
 const style="mt-1 block w-96 px-1 py-1 bg-white border border-[#0E738C] rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-[#0E738C] focus:ring-1 focus:ring-[#0E738C]"
 class LoginForm extends React.Component{
     constructor(props){

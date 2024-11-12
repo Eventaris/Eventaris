@@ -5,5 +5,5 @@ const { register, login, logout, authToken, getUser } = require("../controllers/
 router.post("/register", register);
 router.post("/login", login);
 router.post("/logout", logout);
-router.get("/dasboard",authToken, getUser);
+router.get("/dashboard",authToken, getUser);
 module.exports = router;

@@ -1,6 +1,6 @@
 import React from "react";
 import LoginForm from "./LoginForm";
-import HeadForm from "./HeadForm";
+import HeadForm from "../HeadForm";
 const LoginRightSide = () => {
     return(
         <div className="w-[55%] flex flex-col justify-center items-center">

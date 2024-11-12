@@ -60,8 +60,9 @@ const login = async (req, res) => {
       expiresIn: "1d",
     });
 
-    res.cookie("token", token, {
+    res.cookie(process.env.T_SECRET, token, {
       httpOnly: true,
+      sameSite: "lax",
       secure: process.env.NODE_ENV === "production",
       maxAge:  24 * 60 * 60 * 1000,
     });
@@ -81,7 +82,7 @@ const login = async (req, res) => {
 
 const authToken = async (req, res, next) => {
   try {
-  const token = req.cookies.token;
+  const token = req.cookies[process.env.T_SECRET];
   if (!token) {
     return res.status(400).json({ message: "Anda Belum Login, Login Terlebih Dahulu" });
   }else{
@@ -90,7 +91,7 @@ const authToken = async (req, res, next) => {
     next();
   } 
 }catch (error) {
-  return res.status(400).json({ message: "Anda mencoba untuk masuk dengan token palsu" });
+  return res.status(400).json({ message: "Sesi anda Habis, silahkan login ulang" });
 }
 };
 
@@ -114,7 +115,7 @@ const getUser = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-  res.clearCookie("token");
+  res.clearCookie(process.env.T_SECRET);
   res.json({ message: "Anda Berhasil Logout" });
 };
 

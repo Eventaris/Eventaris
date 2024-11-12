@@ -1,6 +1,6 @@
 import React from "react";
 import RegisForm from "./RegisForm";
-import HeadForm from "./HeadForm";
+import HeadForm from "../HeadForm";
 const RegisRightSide = () => {
     return(
         <div className="w-[55%] flex flex-col justify-center items-center">

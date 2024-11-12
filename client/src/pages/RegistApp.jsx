@@ -1,5 +1,5 @@
 import React from "react";
-import RegisRightSide from "../components/RegisRightSide";
+import RegisRightSide from "../components/regis/RegisRightSide";
 import LeftSideImage from "../components/LeftSideImage";
 const RegistApp = () =>{
     return(
