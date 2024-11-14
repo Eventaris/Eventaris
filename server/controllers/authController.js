@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Products = require("../models/Product");
 const bcrypt = require("bcryptjs");
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
@@ -64,7 +65,7 @@ const login = async (req, res) => {
       httpOnly: true,
       sameSite: "lax",
       secure: process.env.NODE_ENV === "production",
-      maxAge:  24 * 60 * 60 * 1000,
+      maxAge: 24 * 60 * 60 * 1000,
     });
     res.json({
       message: "Login successful!",
@@ -82,17 +83,21 @@ const login = async (req, res) => {
 
 const authToken = async (req, res, next) => {
   try {
-  const token = req.cookies[process.env.T_SECRET];
-  if (!token) {
-    return res.status(400).json({ message: "Anda Belum Login, Login Terlebih Dahulu" });
-  }else{
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded;
-    next();
-  } 
-}catch (error) {
-  return res.status(400).json({ message: "Sesi anda Habis, silahkan login ulang" });
-}
+    const token = req.cookies[process.env.T_SECRET];
+    if (!token) {
+      return res
+        .status(400)
+        .json({ message: "Anda Belum Login, Login Terlebih Dahulu" });
+    } else {
+      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      req.user = decoded;
+      next();
+    }
+  } catch (error) {
+    return res
+      .status(400)
+      .json({ message: "Sesi anda Habis, silahkan login ulang" });
+  }
 };
 
 const getUser = async (req, res) => {
@@ -114,6 +119,28 @@ const getUser = async (req, res) => {
   }
 };
 
+const getProducts = async (req, res) => {
+  const { page = 1, limit = 20 } = req.body; // Menerima data dari request body
+  const offset = (page - 1) * limit;
+
+  try {
+    // Dapatkan produk berdasarkan halaman dan limit
+    const products = await Products.findAll({
+      offset,
+      limit,
+    });
+    const totalProducts = await Products.count();
+
+    res.json({
+      products,
+      totalProducts,
+    });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 const logout = async (req, res) => {
   res.clearCookie(process.env.T_SECRET);
   res.json({ message: "Anda Berhasil Logout" });
@@ -125,4 +152,5 @@ module.exports = {
   logout,
   authToken,
   getUser,
+  getProducts,
 };
