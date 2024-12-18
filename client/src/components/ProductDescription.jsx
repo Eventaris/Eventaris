@@ -10,7 +10,7 @@ const ProductDescription = ({ title, desc, harga }) => {
                 {desc}
             </p>
             <p className="font-bold text-right">
-                Rp. {harga}
+                Rp. {harga.toLocaleString('id-ID')}
             </p>
         </div>
     )

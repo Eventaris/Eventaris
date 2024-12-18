@@ -3,7 +3,7 @@ import "./index.css";
 import '@fontsource/inter';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import {LoginApp, LandingApp, RegistApp, DasboardApp} from './pages/';//jangan lupa tambah kalau ada page baru
+import {LoginApp, LandingApp, RegistApp, DasboardApp, DetailApp} from './pages/';//jangan lupa tambah kalau ada page baru
 
 // Definisikan routing
 const router = createBrowserRouter([
@@ -22,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/dasboard",
     element: <DasboardApp/>,
+  },
+  {
+    path: "/detail/:id",
+    element: <DetailApp/>,
   },
 ]);
 
