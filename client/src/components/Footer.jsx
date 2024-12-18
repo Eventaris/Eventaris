@@ -6,7 +6,7 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
                 <div className="flex gap-4 items-center">
                     <img
-                        src="src/assets/Logo White.png"
+                        src="/src/assets/Logo White.png"
                         alt="Logo"
                         className="w-8 h-auto"
                     />
@@ -17,15 +17,15 @@ const Footer = () => {
             <div className="flex flex-col gap-2">
                 <p className="text-xl font-bold">Contact Us</p>
                 <div className="flex gap-4">
-                    <a href="#"><img src="src/assets/footer-icons/Instagram.svg" alt="" className="w-6 h-6"/></a>
-                    <a href="#"><img src="src/assets/footer-icons/Linkedin.svg" alt="" className="w-6 h-6"/></a>
-                    <a href="#"><img src="src/assets/footer-icons/Github.svg" alt="" className="w-6 h-6"/></a>
+                    <a href="#"><img src="/src/assets/footer-icons/Instagram.svg" alt="" className="w-6 h-6"/></a>
+                    <a href="#"><img src="/src/assets/footer-icons/Linkedin.svg" alt="" className="w-6 h-6"/></a>
+                    <a href="#"><img src="/src/assets/footer-icons/Github.svg" alt="" className="w-6 h-6"/></a>
                     <a href="#" className="flex gap-2">
-                        <img src="src/assets/footer-icons/Mail.svg" alt="" className="w-6 h-6"/>
+                        <img src="/src/assets/footer-icons/Mail.svg" alt="" className="w-6 h-6"/>
                         <p>eventaris@gmail.com</p>
                     </a>
                     <a href="#" className="flex gap-2">
-                        <img src="src/assets/footer-icons/Whatsapp.svg" alt="" className="w-6 h-6"/>
+                        <img src="/src/assets/footer-icons/Whatsapp.svg" alt="" className="w-6 h-6"/>
                         <p>08123456789</p>
                     </a>
                 </div>
