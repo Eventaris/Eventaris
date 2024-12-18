@@ -84,12 +84,12 @@ const DashboardApp = () => {
                             <ProductCard key={index} harga={product.harga} count={100000} cate={product.category} image={"https://images.pexels.com/photos/61180/pexels-photo-61180.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"} link={"/detail/" + product.id} title={product.nama} desc={product.deskripsi} />
                         ))}
                     </div>
-                    {hasMoreProducts && (
-                        <button onClick={handleLoadMore} disabled={loading}>
-                            {loading ? (<Loading />) : 'Muat Lebih Banyak'}
+                </div>
+                {hasMoreProducts && (
+                        <button className="bg-green5 py-4 px-4 mb-3 rounded-xl justify-center mx-auto block text-white text-sm hover:bg-green2 transition duration-300" onClick={handleLoadMore} disabled={loading}>
+                            {loading ? (<Loading />) : ('Muat Lebih Banyak')}
                         </button>
                     )}
-                </div>
                 {loading ? (<Loading />) : (
                     <Footer />
                 )}
