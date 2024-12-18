@@ -45,7 +45,7 @@ const DetailApp = () => {
     return (
         <div>
             <Navbar isLoggedIn={true} />
-            <div className="mx-auto p-6 flex flex-row pt-20">
+            <div className="mx-auto p-10 flex flex-row pt-20">
                 <LeftSide />
                 <RightSide
                     nama={product.nama}

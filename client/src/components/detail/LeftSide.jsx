@@ -9,7 +9,7 @@ const LeftSide = () => {
     };
 
     return (
-        <div className="w-full md:w-1/2 mb-8">
+        <div className=" md:w-1/2 mb-8 w-[45%]">
             <img
                 src={mainImage}
                 alt="Product"
