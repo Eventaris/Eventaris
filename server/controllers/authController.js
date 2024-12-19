@@ -146,6 +146,23 @@ const logout = async (req, res) => {
   res.json({ message: "Anda Berhasil Logout" });
 };
 
+const getProductById = async (req, res) => {
+  try {
+    const { id } = req.params; // Mengambil ID dari parameter URL
+
+    // Cari produk berdasarkan ID
+    const product = await Products.findByPk(id);
+
+    if (!product) {
+      return res.status(404).json({ message: "Produk tidak ditemukan" });
+    }
+    res.json(product); // Mengirimkan data produk
+  } catch (error) {
+    console.error("Error fetching product by ID:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 module.exports = {
   register,
   login,
@@ -153,4 +170,5 @@ module.exports = {
   authToken,
   getUser,
   getProducts,
+  getProductById,
 };

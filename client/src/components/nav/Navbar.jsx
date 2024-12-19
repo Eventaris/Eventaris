@@ -9,7 +9,7 @@ const Navbar = ({ isLoggedIn }) => {
             {/* Logo */}
             <div className="flex gap-4 items-center cursor-pointer">
                 <img
-                    src="src/assets/Logo White.png"
+                    src="/src/assets/Logo White.png"
                     alt="Logo"
                     className="w-8 h-auto"
                 />
